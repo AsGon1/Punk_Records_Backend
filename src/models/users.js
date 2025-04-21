@@ -12,6 +12,10 @@ const User = connection.define("users",{
         autoIncrement: true,
         unique:true
     },
+    nickname: {
+        type: DataTypes.STRING(80),
+        allowNull: false,
+    },
     email: {
         type: DataTypes.STRING(128),
         allowNull: false,
