@@ -1,4 +1,4 @@
-import User from "../../models/users.js";
+import User from "../../models/user.js";
 import { hash, compare } from "../../utils/bcrypt.js";
 import {
     UserNicknameNotProvided,

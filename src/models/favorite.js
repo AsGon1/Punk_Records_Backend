@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize";
 import connection from "../config/db.js";
-import Review from "./reviews.js";
+import Review from "./review.js";
 
 
 // MODELO DE LOS FAVORITOS DE CADA USUARIO
