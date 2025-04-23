@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import session from 'express-session';
-//import router from './routes/router.js';
+import router from './routes/router.js';
 import cors from "cors";
 
 // Cargar variables de entorno
@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 
 // Configurar rutas
 
-//app.use('/', router);
+app.use('/', router);
 
 // Iniciar servidor
 app.listen(3000, () => {
