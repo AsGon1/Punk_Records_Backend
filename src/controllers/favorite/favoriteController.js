@@ -12,6 +12,17 @@ async function getAllUserFavorites(id) {
 
 }
 
+// FUNCION PARA OBTENER EL FAVORITO POR ID
+async function getByID(id) {
+
+    const favorite = await Favorite.findByPk(id, {
+        include: [User]
+    });
+
+    return favorite;
+    
+}
+
 // FUNCION PARA CREAR EL FAVORITO
 async function create(data) {
 
@@ -46,6 +57,7 @@ async function remove(media_id){
 
 export default{
     getAllUserFavorites,
+    getByID,
     create,
     edit,
     remove
