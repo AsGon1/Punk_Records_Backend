@@ -20,7 +20,19 @@ async function getByID(id) {
     });
 
     return favorite;
-    
+
+}
+
+// FUNCION PARA OBTENER EL FAVORITO POR ID DE LA API EXTERNA
+async function getByMediaID(media_id) {
+
+    const filter = {include: [User]};
+    filter.where = {media_id: media_id};
+
+    const favorite = await Favorite.findOne(filter);
+
+    return favorite;
+
 }
 
 // FUNCION PARA CREAR EL FAVORITO
@@ -31,8 +43,24 @@ async function create(data) {
 
 }
 
-// FUNCION PARA EDITAR EL FAVORITO (SOLO SE PODRA EDITAR SI SE HA TERMINADO O NO)
-async function edit(media_id, data){
+// FUNCION PARA EDITAR EL FAVORITO
+async function edit(id, data){
+
+    const result = await Favorite.update(
+        data,
+        {
+            where:{
+                favorite_id: id
+            }
+        }
+    );
+
+    return result;
+
+}
+
+// FUNCION PARA EDITAR UN FAVORITO POR SU ID EN LA API EXTERNA
+async function editByMediaID(media_id, data){
 
     const result = await Favorite.update(
         data,
@@ -48,7 +76,15 @@ async function edit(media_id, data){
 }
 
 // FUNCION PARA ELIMINAR EL FAVORITO
-async function remove(media_id){
+async function remove(id){
+
+    const result = await Favorite.findByPk(id);
+    result.destroy();
+
+}
+
+// FUNCION PARA ELIMINAR EL FAVORITO EL ID DE LA API EXTERNA
+async function removeByMediaID(media_id){
 
     const result = await Favorite.findOne({ where: { media_id: media_id } });
     result.destroy();
@@ -58,7 +94,10 @@ async function remove(media_id){
 export default{
     getAllUserFavorites,
     getByID,
+    getByMediaID,
     create,
     edit,
-    remove
+    editByMediaID,
+    remove,
+    removeByMediaID
 }

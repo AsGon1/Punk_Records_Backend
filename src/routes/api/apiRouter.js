@@ -1,5 +1,6 @@
 import { Router } from "express";
 import authRouter from "./authRouter.js";
+import favoriteRouter from "./favoriteRouter.js"
 
 const router = Router();
 
@@ -8,5 +9,6 @@ router.get("/", (req, res) => {
 })
 
 router.use("/", authRouter);
+router.use("/favorite", favoriteRouter);
 
 export default router
