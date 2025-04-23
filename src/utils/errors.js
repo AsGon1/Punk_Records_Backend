@@ -36,10 +36,28 @@ class UserInvalidCredentials extends Error {
     }
 }
 
+// ERRORES DE LAS REVIEWS
+
+class RatingNotProvided extends Error {
+    constructor(){
+        super("Rating not provided");
+        this.statusCode = 400;
+    }
+}
+
+class ReviewNotProvided extends Error {
+    constructor(){
+        super("Review not provided");
+        this.statusCode = 400;
+    }
+}
+
 export {
     UserNicknameNotProvided,
     UserEmailNotProvided,
     UserPasswordNotProvided,
     UserEmailAlreadyExists,
-    UserInvalidCredentials
+    UserInvalidCredentials,
+    RatingNotProvided,
+    ReviewNotProvided
 }
