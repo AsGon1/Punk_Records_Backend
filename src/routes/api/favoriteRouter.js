@@ -1,6 +1,6 @@
 import {Router} from "express";
 import favoriteAPIController from "../../controllers/favorite/favoriteAPIController.js"
-import { isLoggedInAPI } from "../../middlewares/authMiddleware.js";
+import { isLoggedInAPI } from "../../middleware/authMiddleware.js";
 const router = Router();
 
 // conseguir todos los favoritos del usuario

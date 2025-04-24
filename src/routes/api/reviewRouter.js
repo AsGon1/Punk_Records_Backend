@@ -1,6 +1,6 @@
 import {Router} from "express";
 import reviewAPIController from "../../controllers/review/reviewAPIController.js"
-import { isLoggedInAPI } from "../../middlewares/authMiddleware.js";
+import { isLoggedInAPI } from "../../middleware/authMiddleware.js";
 const router = Router();
 
 // conseguir todas las reviews del usuario
