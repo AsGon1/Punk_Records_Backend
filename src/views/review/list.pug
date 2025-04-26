@@ -1,0 +1,14 @@
+block content 
+
+    h1 Reviews
+    
+    section(class="new-review-section")
+        a(href="/review/create" class="new-review") New Favorite
+
+    section(class="review-list")
+        if reviews
+            each review in reviews
+                a(href=`/review/${review.favorite_id}`)
+                    include reviewCard
+        else 
+            p There is no review available

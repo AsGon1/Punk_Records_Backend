@@ -1,0 +1,10 @@
+article 
+    
+    p(class="review-card__name")=favorite.media_name
+    p(class="review-card__rating")= "Rating: " + favorite.review.rating + "/10"
+    p(class="review-card__review")=favorite.media_name
+      
+    a(href=`/review/${favorite.review.favorite_id}/edit`)
+        button Edit
+    form(action=`/review/${favorite.review.favorite_id}/delete`, method="post") 
+        button Delete
