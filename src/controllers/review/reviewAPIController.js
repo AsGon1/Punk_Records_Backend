@@ -93,7 +93,7 @@ async function edit(req, res) {
     try {
 
         const favorite_id = req.params.favorite_id;
-        const result = await favoriteController.edit(favorite_id, req.body);
+        const result = await reviewController.edit(favorite_id, req.body);
         res.json(result);
 
     } catch (error) {
@@ -130,7 +130,7 @@ async function removeByFavoriteID(req, res) {
     try{
 
         const favorite_id = req.params.favorite_id;
-        const response = await favoriteController.removeByFavoriteID(media_id);
+        const response = await reviewController.removeByFavoriteID(favorite_id);
         res.json(response);
 
     } catch (error) {

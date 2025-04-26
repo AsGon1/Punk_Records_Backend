@@ -49,32 +49,26 @@ INSERT INTO punkrecords.favorites (media_name, media_id, media_type, finished, u
 INSERT INTO punkrecords.reviews (rating, review, date, favorite_id) VALUES
 (9, 'Una historia brutal que redefine el anime moderno.', '2025-04-21', 1),
 (8, 'Mucha sangre y locura. Muy entretenido.', '2025-04-21', 2),
-(6, 'La idea es buena, pero me pareció repetitivo.', '2025-04-22', 3),
 (10, 'Una joya. Cada capítulo te mantiene pegado.', '2025-04-22', 4),
-(7, 'Lento a veces, pero las peleas son épicas.', '2025-04-23', 5),
 (9, 'Visualmente espectacular y emotivo.', '2025-04-23', 6),
-(5, 'Meh... esperaba más desarrollo de personajes.', '2025-04-23', 7),
 
 (10, 'El mejor anime de aventuras, sin duda.', '2025-04-21', 8),
 (10, 'Oscuro y profundo. Un manga inolvidable.', '2025-04-22', 9),
-(7, 'Muy colorido, pero la trama no me atrapó tanto.', '2025-04-23', 10),
 (8, 'Muy emotivo y bien animado.', '2025-04-23', 11),
 (10, 'Dibujos que parecen vivos. Vagabond es arte puro.', '2025-04-24', 12),
 (9, 'Shingeki no Kyojin cambia las reglas del juego.', '2025-04-24', 13),
-(6, 'Demasiado gore para mi gusto.', '2025-04-24', 14),
+
+(4, 'Demasiado infantil para mi gusto.', '2025-04-24', 11), -- Reseña negativa en Fruits Basket
+(5, 'Historia demasiado alargada, debería haber acabado antes.', '2025-04-24', 8), -- Reseña negativa en One Piece
 
 (8, 'Gran historia, aunque con relleno.', '2025-04-21', 15),
 (9, 'Una historia de mente maestra. Me voló la cabeza.', '2025-04-22', 16),
 (6, 'Buen manga pero pierde fuerza a mitad.', '2025-04-22', 17),
-(7, 'Personajes geniales, pero mucha pausa en la acción.', '2025-04-23', 18),
-(5, 'Tokyo Ghoul empieza bien pero se desinfla.', '2025-04-23', 19),
 (8, 'Típico shonen, pero muy divertido.', '2025-04-24', 20),
 (9, 'Berserk nunca decepciona.', '2025-04-24', 21),
 
 (9, 'Peleas brutales, animación top.', '2025-04-21', 22),
 (7, 'Nostalgia pura, pero los combates siguen emocionando.', '2025-04-21', 23),
-(8, 'Demasiado largo pero muy épico.', '2025-04-22', 24),
 (8, 'Naruto tiene mucho corazón.', '2025-04-22', 25),
 (8, 'Chainsaw Man es salvajemente divertido.', '2025-04-23', 26),
-(9, 'Historia profunda y personajes entrañables.', '2025-04-24', 27),
 (7, 'Bleach me encanta, aunque la saga final decae.', '2025-04-24', 28);
