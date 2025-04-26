@@ -1,0 +1,14 @@
+article 
+    
+    p(class="favorite-card__name")=favorite.media_name
+    p(class="favorite-card__id")= "ID: " + favorite.media_ID
+    p(class="favorite-card__type")= "Type: " + favorite.media_type
+    if favorite.finished
+        p(class="favorite-card__finished")= "Finished: YES"
+    else 
+        p(class="favorite-card__finished")= "Finished: NO"
+      
+    a(href=`/favorite/${favorite.favorite_id}/edit`)
+        button Edit
+    form(action=`/favorite/${favorite.favorite_id}/delete`, method="post") 
+        button Delete

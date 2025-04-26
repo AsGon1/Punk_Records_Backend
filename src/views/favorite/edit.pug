@@ -1,0 +1,11 @@
+extends ../layout
+
+block content 
+    h1 Edit Favorite 
+    form(action=`/favorite/${favorite.favorite_id}`, method="post") 
+        label(for="finiahed") Finished
+        select#finished(name="finished") 
+            option(value=1) YES
+            option(value=0) NO 
+
+        button Submit
