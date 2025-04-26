@@ -1,0 +1,14 @@
+block content 
+
+    h1 Favorites
+    
+    section(class="new-favorite-section")
+        a(href="/favorite/create" class="new-favorite") New Favorite
+
+    section(class="favorite-list")
+        if favorites
+            each favorite in favorites
+                a(href=`/favorite/${favorite.favorite_id}`)
+                    include favoriteCard
+        else 
+            p There is no favorite available

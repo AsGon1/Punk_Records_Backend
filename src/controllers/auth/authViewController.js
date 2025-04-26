@@ -30,8 +30,7 @@ async function login(req, res) {
         const loggedInUser = await authController.login(email, password);
 
         req.session.user = {
-            user_id: loggedInUser.user_id,
-            role: loggedInUser.role
+            user_id: loggedInUser.user_id
         };
 
         res.redirect("/home");
