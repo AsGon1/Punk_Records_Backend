@@ -1,6 +1,6 @@
 import {Router} from "express";
 import favoriteAPIController from "../../controllers/favorite/favoriteAPIController.js"
-import { isLoggedInAPI } from "../../middlewares/authMiddleware.js";
+import { isLoggedInAPI } from "../../middleware/authMiddleware.js";
 const router = Router();
 
 // conseguir todos los favoritos del usuario
@@ -13,18 +13,18 @@ router.post("/",favoriteAPIController.create)
 router.get("/:id",favoriteAPIController.getByID)
 
 // conseguir favorito por id de la api externa
-router.get("/:media_id",favoriteAPIController.getByMediaID)
+router.get("/media/:media_id",favoriteAPIController.getByMediaID)
 
 // modificar un favorito
 router.put("/:id",favoriteAPIController.edit)
 
 // modificar un favorito por id de la api externa
-router.put("/:media_id",favoriteAPIController.editByMediaID)
+router.put("/media/:media_id",favoriteAPIController.editByMediaID)
 
 // ruta para eliminar un favorito
 router.delete("/:id",favoriteAPIController.remove)
 
 // ruta para eliminar un favorito
-router.delete("/:media_id",favoriteAPIController.removeByMediaID)
+router.delete("/media/:media_id",favoriteAPIController.removeByMediaID)
 
 export default router;

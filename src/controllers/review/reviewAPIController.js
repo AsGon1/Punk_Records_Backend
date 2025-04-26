@@ -1,4 +1,4 @@
-import reviewController from './favoriteController.js';
+import reviewController from './reviewController.js';
 
 async function getAllUserReviews(req,res){
 

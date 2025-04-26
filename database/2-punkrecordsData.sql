@@ -1,9 +1,80 @@
 USE punkrecords;
 
-INSERT INTO punkrecords.users (nickname, email, password, user_img)
-VALUES
-('CarlosPunk', 'carlos.punk@email.com', 'password123', 'img_carlos.jpg'),
-('AnaRock', 'ana.rock@email.com', 'password123', 'img_ana.jpg'),
-('PedroVibe', 'pedro.vibe@email.com', 'password123', 'img_pedro.jpg'),
-('LuciaSound', 'lucia.sound@email.com', 'password123', 'img_lucia.jpg'),
-('JavierBeats', 'javier.beats@email.com', 'password123', 'img_javier.jpg');
+-- Insertar usuarios
+INSERT INTO punkrecords.users (nickname, email, password, user_img) VALUES
+('OtakuPunk', 'otakupunk@example.com', 'hashedpassword1', 'otakupunk.jpg'),
+('MangaQueen', 'mangaqueen@example.com', 'hashedpassword2', 'mangaqueen.png'),
+('AnimeSlayer', 'animeslayer@example.com', 'hashedpassword3', 'animeslayer.jpg'),
+('ShonenMaster', 'shonenmaster@example.com', 'hashedpassword4', 'shonenmaster.png');
+
+-- Insertar favoritos (anime y manga)
+INSERT INTO punkrecords.favorites (media_name, media_id, media_type, finished, user_id) VALUES
+-- OtakuPunk
+('Attack on Titan', 201, 'anime', b'1', 1),
+('Chainsaw Man', 202, 'manga', b'1', 1),
+('Tokyo Revengers', 203, 'anime', b'0', 1),
+('Death Note', 207, 'anime', b'1', 1),
+('One Piece', 204, 'anime', b'0', 1),
+('Demon Slayer', 213, 'anime', b'1', 1),
+('Bleach', 209, 'manga', b'0', 1),
+
+-- MangaQueen
+('One Piece', 204, 'anime', b'1', 2),
+('Berserk', 205, 'manga', b'1', 2),
+('Sailor Moon', 206, 'anime', b'0', 2),
+('Fruits Basket', 214, 'anime', b'1', 2),
+('Vagabond', 211, 'manga', b'1', 2),
+('Attack on Titan', 201, 'anime', b'1', 2),
+('Chainsaw Man', 202, 'manga', b'0', 2),
+
+-- AnimeSlayer
+('Naruto', 208, 'anime', b'1', 3),
+('Death Note', 207, 'anime', b'1', 3),
+('Bleach', 209, 'manga', b'1', 3),
+('My Hero Academia', 212, 'anime', b'0', 3),
+('Tokyo Ghoul', 215, 'anime', b'0', 3),
+('Black Clover', 216, 'anime', b'1', 3),
+('Berserk', 205, 'manga', b'1', 3),
+
+-- ShonenMaster
+('Jujutsu Kaisen', 210, 'anime', b'1', 4),
+('Dragon Ball Z', 217, 'anime', b'1', 4),
+('One Piece', 204, 'anime', b'0', 4),
+('Naruto', 208, 'anime', b'1', 4),
+('Chainsaw Man', 202, 'manga', b'1', 4),
+('Hunter x Hunter', 218, 'anime', b'0', 4),
+('Bleach', 209, 'manga', b'1', 4);
+
+-- Insertar reseñas
+INSERT INTO punkrecords.reviews (rating, review, date, favorite_id) VALUES
+(9, 'Una historia brutal que redefine el anime moderno.', '2025-04-21', 1),
+(8, 'Mucha sangre y locura. Muy entretenido.', '2025-04-21', 2),
+(6, 'La idea es buena, pero me pareció repetitivo.', '2025-04-22', 3),
+(10, 'Una joya. Cada capítulo te mantiene pegado.', '2025-04-22', 4),
+(7, 'Lento a veces, pero las peleas son épicas.', '2025-04-23', 5),
+(9, 'Visualmente espectacular y emotivo.', '2025-04-23', 6),
+(5, 'Meh... esperaba más desarrollo de personajes.', '2025-04-23', 7),
+
+(10, 'El mejor anime de aventuras, sin duda.', '2025-04-21', 8),
+(10, 'Oscuro y profundo. Un manga inolvidable.', '2025-04-22', 9),
+(7, 'Muy colorido, pero la trama no me atrapó tanto.', '2025-04-23', 10),
+(8, 'Muy emotivo y bien animado.', '2025-04-23', 11),
+(10, 'Dibujos que parecen vivos. Vagabond es arte puro.', '2025-04-24', 12),
+(9, 'Shingeki no Kyojin cambia las reglas del juego.', '2025-04-24', 13),
+(6, 'Demasiado gore para mi gusto.', '2025-04-24', 14),
+
+(8, 'Gran historia, aunque con relleno.', '2025-04-21', 15),
+(9, 'Una historia de mente maestra. Me voló la cabeza.', '2025-04-22', 16),
+(6, 'Buen manga pero pierde fuerza a mitad.', '2025-04-22', 17),
+(7, 'Personajes geniales, pero mucha pausa en la acción.', '2025-04-23', 18),
+(5, 'Tokyo Ghoul empieza bien pero se desinfla.', '2025-04-23', 19),
+(8, 'Típico shonen, pero muy divertido.', '2025-04-24', 20),
+(9, 'Berserk nunca decepciona.', '2025-04-24', 21),
+
+(9, 'Peleas brutales, animación top.', '2025-04-21', 22),
+(7, 'Nostalgia pura, pero los combates siguen emocionando.', '2025-04-21', 23),
+(8, 'Demasiado largo pero muy épico.', '2025-04-22', 24),
+(8, 'Naruto tiene mucho corazón.', '2025-04-22', 25),
+(8, 'Chainsaw Man es salvajemente divertido.', '2025-04-23', 26),
+(9, 'Historia profunda y personajes entrañables.', '2025-04-24', 27),
+(7, 'Bleach me encanta, aunque la saga final decae.', '2025-04-24', 28);
