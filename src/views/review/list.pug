@@ -6,7 +6,7 @@ block content
         a(href="/review/create" class="new-review") New Favorite
 
     section(class="review-list")
-        if reviews
+        if favorite.reviews
             each review in reviews
                 a(href=`/review/${review.favorite_id}`)
                     include reviewCard
