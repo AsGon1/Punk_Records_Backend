@@ -9,8 +9,8 @@ import {
 } from "../../utils/errors.js";
 
 async function register(userData) {
-    
-    if (!userData.nicknname) throw new UserNicknameNotProvided();
+
+    if (!userData.nickname) throw new UserNicknameNotProvided();
     if (!userData.email) throw new UserEmailNotProvided();
     if (!userData.password) throw new UserPasswordNotProvided();
 

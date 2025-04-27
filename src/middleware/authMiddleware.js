@@ -15,7 +15,7 @@ function isLoggedInSession(req, res, next) {
 function isLoggedInAPI(req, res, next) {
 
     const authorization = req.headers.authorization;
-
+    console.log("authorization",authorization);
     if (!authorization) {
         return res.status(401).json({ error: "You are not authorised" });
     }

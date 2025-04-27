@@ -2,10 +2,10 @@ USE punkrecords;
 
 -- Insertar usuarios
 INSERT INTO punkrecords.users (nickname, email, password, user_img) VALUES
-('OtakuPunk', 'otakupunk@example.com', 'hashedpassword1', 'otakupunk.jpg'),
-('MangaQueen', 'mangaqueen@example.com', 'hashedpassword2', 'mangaqueen.png'),
-('AnimeSlayer', 'animeslayer@example.com', 'hashedpassword3', 'animeslayer.jpg'),
-('ShonenMaster', 'shonenmaster@example.com', 'hashedpassword4', 'shonenmaster.png');
+('OtakuPunk', 'otakupunk@example.com', '$2b$10$3hlItH6DsK5FMGuhhgsGj.IivU6zHhKREr5o3X4V72qnHoq44NLBK', 'otakupunk.jpg'),
+('MangaQueen', 'mangaqueen@example.com', '$2b$10$3hlItH6DsK5FMGuhhgsGj.IivU6zHhKREr5o3X4V72qnHoq44NLBK', 'mangaqueen.png'),
+('AnimeSlayer', 'animeslayer@example.com', '$2b$10$3hlItH6DsK5FMGuhhgsGj.IivU6zHhKREr5o3X4V72qnHoq44NLBK', 'animeslayer.jpg'),
+('ShonenMaster', 'shonenmaster@example.com', '$2b$10$3hlItH6DsK5FMGuhhgsGj.IivU6zHhKREr5o3X4V72qnHoq44NLBK', 'shonenmaster.png');
 
 -- Insertar favoritos (anime y manga)
 INSERT INTO punkrecords.favorites (media_name, media_id, media_type, finished, user_id) VALUES
