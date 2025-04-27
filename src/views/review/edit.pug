@@ -3,9 +3,9 @@ extends ../layout
 block content 
     h1 Edit Review
 
-    p(class="review__name")=favorite.media_name
+    p(class="review__name")=review.favorite.media_name
 
-    form(action=`/review/${favorite.favorite_id}`, method="post") 
+    form(action=`/review/${review.favorite_id}`, method="post") 
 
         label(for="rating") Rating
         input#rating(type="number", name="rating")
