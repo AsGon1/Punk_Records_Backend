@@ -7,7 +7,7 @@ const router = Router();
 router.get("/",isLoggedInAPI,favoriteAPIController.getAllUserFavorites)
 
 // crear un favorito
-router.post("/",favoriteAPIController.create)
+router.post("/create",favoriteAPIController.create)
 
 // conseguir favorito por id
 router.get("/:id",favoriteAPIController.getByID)
