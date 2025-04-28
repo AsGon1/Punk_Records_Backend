@@ -1,11 +1,11 @@
 import {Router} from "express";
 import favoriteViewController from "../../controllers/favorite/favoriteViewController.js"
-import { isLoggedInAPI } from "../../middleware/authMiddleware.js";
+import { isLoggedInSession } from "../../middleware/authMiddleware.js";
 
 const router = Router();
 
 // conseguir todos los favoritos del usuario
-router.get("/",isLoggedInAPI,favoriteViewController.getAllUserFavorites)
+router.get("/",isLoggedInSession,favoriteViewController.getAllUserFavorites)
 
 // crear un favorito
 router.get("/create",favoriteViewController.createForm);

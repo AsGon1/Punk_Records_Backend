@@ -1,27 +1,27 @@
 import {Router} from "express";
 import reviewViewController from "../../controllers/review/reviewViewController.js"
-import { isLoggedInAPI } from "../../middleware/authMiddleware.js";
+import { isLoggedInSession } from "../../middleware/authMiddleware.js";
 
 const router = Router();
 
-// conseguir todos los favoritos del usuario
-router.get("/",isLoggedInAPI,reviewViewController.getAllUserReviews)
+// conseguir todos las reviews del usuario
+router.get("/",isLoggedInSession,reviewViewController.getAllUserReviews)
 
-// crear un favorito
+// crear una review
 router.get("/create",reviewViewController.createForm);
 router.post("/",reviewViewController.create)
 
-// conseguir favorito por id
+// conseguir review por id
 router.get("/:id",reviewViewController.getByID)
 
-// conseguir favorito por id de la api externa
+// conseguir review por id del medio
 router.get("/media/:media_id",reviewViewController.getByMediaID)
 
-// modificar un favorito
+// modificar una review
 router.get("/:id/edit",reviewViewController.editForm)
 router.put("/:id",reviewViewController.edit)
 
-// ruta para eliminar un favorito
+// ruta para eliminar un review
 router.delete("/:id/delete",reviewViewController.remove)
 
 export default router;

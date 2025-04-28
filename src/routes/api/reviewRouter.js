@@ -7,7 +7,7 @@ const router = Router();
 router.get("/",isLoggedInAPI,reviewAPIController.getAllUserReviews)
 
 // crear una review
-router.post("/",reviewAPIController.create)
+router.post("/create",reviewAPIController.create)
 
 // conseguir review por id
 router.get("/:id",reviewAPIController.getByID)
@@ -25,6 +25,6 @@ router.put("/:favorite_id",reviewAPIController.edit)
 router.delete("/:id/delete",reviewAPIController.remove)
 
 // ruta para eliminar un una review por id del favorito
-router.delete("/:favorite_id/delete",reviewAPIController.removeByFavoriteID)
+router.delete("/favorite/:favorite_id/delete",reviewAPIController.removeByFavoriteID)
 
 export default router;

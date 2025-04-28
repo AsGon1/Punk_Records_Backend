@@ -12,7 +12,7 @@ const app = express();
 const APP_PORT = process.env.APP_PORT || 3000;
 
 // Configurar middleware
-//app.use(cors());
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));

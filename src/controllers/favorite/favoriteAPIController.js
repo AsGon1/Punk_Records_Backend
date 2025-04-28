@@ -4,7 +4,7 @@ async function getAllUserFavorites(req,res){
 
     try {
 
-        const id = req.session.user?.user_id;
+        const id = req.user?.user_id;
         const favorites = await favoriteController.getAllUserFavorites(id);
         res.json(favorites);
 

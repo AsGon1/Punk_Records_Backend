@@ -4,9 +4,9 @@ import Favorite from "../../models/favorite.js";
 async function getAllUserReviews(req,res){
     try{
         const id = req.session.user?.user_id;
-        const reviews = await reviewController.getAllUserReviews(id);
+        const favorites = await reviewController.getAllUserReviews(id);
         //res.json(reviews);
-        res.render("review/list",{reviews});
+        res.render("review/list",{favorites});
     }catch (error) {
         console.error(error);
         res.render("layout", {error: "Internal Server Error"}); // vamos a la vista de layout y le mostramos el error

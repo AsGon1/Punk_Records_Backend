@@ -4,7 +4,7 @@ async function getAllUserReviews(req,res){
 
     try {
 
-        const id = req.session.user?.user_id;
+        const id = req.user?.user_id;
         const reviews = await reviewController.getAllUserReviews(id);
         res.json(reviews);
 

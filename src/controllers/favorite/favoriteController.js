@@ -84,9 +84,9 @@ async function remove(id){
 }
 
 // FUNCION PARA ELIMINAR EL FAVORITO EL ID DE LA API EXTERNA
-async function removeByMediaID(media_id){
+async function removeByMediaID(media_id, user_id){
 
-    const result = await Favorite.findOne({ where: { media_id: media_id } });
+    const result = await Favorite.findOne({ where: { media_id: media_id, user_id: user_id} });
     result.destroy();
 
 }
