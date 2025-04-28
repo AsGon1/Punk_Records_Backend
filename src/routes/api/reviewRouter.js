@@ -22,9 +22,9 @@ router.get("/media/:media_id",reviewAPIController.getByMediaID)
 router.put("/:favorite_id",reviewAPIController.edit)
 
 // ruta para eliminar una review
-router.delete("/:id",reviewAPIController.remove)
+router.delete("/:id/delete",reviewAPIController.remove)
 
 // ruta para eliminar un una review por id del favorito
-router.delete("/:favorite_id",reviewAPIController.removeByFavoriteID)
+router.delete("/:favorite_id/delete",reviewAPIController.removeByFavoriteID)
 
 export default router;

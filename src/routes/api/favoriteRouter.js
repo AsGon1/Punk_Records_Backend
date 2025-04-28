@@ -22,9 +22,9 @@ router.put("/:id",favoriteAPIController.edit)
 router.put("/media/:media_id",favoriteAPIController.editByMediaID)
 
 // ruta para eliminar un favorito
-router.delete("/:id",favoriteAPIController.remove)
+router.delete("/:id/delete",favoriteAPIController.remove)
 
 // ruta para eliminar un favorito
-router.delete("/media/:media_id",favoriteAPIController.removeByMediaID)
+router.delete("/media/:media_id/delete",favoriteAPIController.removeByMediaID)
 
 export default router;

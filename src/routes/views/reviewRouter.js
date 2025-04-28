@@ -22,6 +22,6 @@ router.get("/:id/edit",reviewViewController.editForm)
 router.put("/:id",reviewViewController.edit)
 
 // ruta para eliminar un favorito
-router.delete("/:id",reviewViewController.remove)
+router.delete("/:id/delete",reviewViewController.remove)
 
 export default router;

@@ -17,7 +17,7 @@ async function getAllUserReviews(id) {
 async function getByID(id) {
 
     const review = await Review.findByPk(id, {
-        include: [User, Favorite]
+        include: [{model: Favorite, include: User}]
     });
 
     return review;
@@ -27,7 +27,7 @@ async function getByID(id) {
 // FUNCION PARA OBTENER LAS REVIEWS POR ID DEL FAVORITO
 async function getByFavoriteID(favorite_id) {
 
-    const filter = {include: [User, Favorite]};
+    const filter = {include: [{model: Favorite, include: User}]};
     filter.where = {favorite_id: favorite_id};
 
     const review = await Review.findOne(filter);
@@ -80,7 +80,7 @@ async function edit(favorite_id, data){
         }
     );
 
-    const filter = {include: [User, Favorite]};
+    const filter = {include: [{model: Favorite, include: User}]};
     filter.where = {favorite_id: favorite_id};
 
     const updatedReview = await Review.findOne(filter);
