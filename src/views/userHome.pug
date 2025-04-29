@@ -1,0 +1,12 @@
+extends ./layout
+
+block content
+
+    p(class="user-card__nickname")="Nickname: " + user.nickname
+
+    ul 
+        li 
+            a(href="/favorite") Favorites
+        li
+            a(href="/review") Reviews
+            

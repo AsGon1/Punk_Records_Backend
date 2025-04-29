@@ -1,0 +1,20 @@
+extends ../layout
+
+block content 
+
+    h1 New Review 
+
+    form(action="/review", method="post") 
+    
+        label(for="favorite_id") Favorite 
+        select#favorite_id(name="favorite_id") 
+            each favorite in favorites 
+                option(value=favorite.favorite_id)= favorite.media_name
+
+        label(for="rating") Rating
+        input#rating(type="number", name="rating")
+
+        label(for='review') Review
+        textarea#review(name='review', v-model='review', required)
+        
+        button Create

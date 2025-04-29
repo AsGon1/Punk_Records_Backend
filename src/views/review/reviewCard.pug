@@ -1,0 +1,13 @@
+article 
+    
+    p(class="review-card__name")= favorite.media_name
+    if reviews
+        each review in reviews
+            p(class="review-card__date")= review.date
+            p(class="review-card__rating")= "Rating: " + review.rating + "/10"
+            p(class="review-card__review")= review.review
+      
+    a(href=`/review/edit`)
+        button Edit
+    form(action=`/review/${favorite.reviews.review_id}/delete`, method="post") 
+        button Delete

@@ -1,0 +1,25 @@
+extends ../layout
+
+block content 
+
+    h1 New Favorite 
+
+    form(action="/favorite", method="post") 
+    
+        label(for="name") Name 
+        input#name(type="text", name="name")
+
+        label(for="media_id") Media ID
+        input#media_id(type="number", name="media_id")
+
+        label(for="media_type") Type
+        select#media_type(name="media_type")
+            option(value="Anime") Anime
+            option(value="Manga") Manga
+        
+        label(for="finiahed") Finished
+        select#finished(name="finished") 
+            option(value=1) YES
+            option(value=0) NO 
+        
+        button Create
