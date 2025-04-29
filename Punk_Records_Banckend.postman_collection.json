@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "00f951f4-741c-444f-b7d2-07f51a58030e",
+		"name": "Punk_Records_Banckend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43976567",
+		"_collection_link": "https://asiergonzalez-6776048.postman.co/workspace/Asier-Gonzalez's-Workspace~f1963b19-f4a1-4264-888d-7fe6c94331dc/collection/43976567-00f951f4-741c-444f-b7d2-07f51a58030e?action=share&source=collection_link&creator=43976567"
+	},
+	"item": [
+		{
+			"name": "favorites",
+			"item": [
+				{
+					"name": "user_favorites",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/favorite",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"favorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "favorite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/favorite/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"favorite",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "favorite_media",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/favorite/media/201",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"favorite",
+								"media",
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_favorite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"media_name\": \"Dragon Ball\",\n    \"media_id\": 233,\n    \"media_type\": \"manga\",\n    \"finished\": 1,\n    \"user_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/favorite/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"favorite",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit_favorite",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"finished\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/favorite/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"favorite",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_favorite",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/favorite/30/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"favorite",
+								"30",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "review",
+			"item": [
+				{
+					"name": "user_reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/review",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "review",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/review/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"review",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "review_media",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/review/media/201",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"review",
+								"media",
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rating\": 9,\n    \"review\": \"Increible historia\",\n    \"favorite_id\": 30\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/review/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"review",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit_review",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rating\": 7,\n    \"review\": \"tipicaa historia\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/review/30",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"review",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_review",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/review/22/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"review",
+								"22",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"otakupunk@example.com\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nickname\": \"ACAsier\",\n    \"email\": \"punkrecordsadmin@gmail.com\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE3NDU5MjQ2MDIsImV4cCI6MTc0NjAxMTAwMn0.0swLIRMIQ0X7bYoSjFUIveSLkYS6AuGypaJBDCKid2c",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3010/api",
+			"type": "string"
+		}
+	]
+}
