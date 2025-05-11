@@ -13,7 +13,7 @@ router.post("/create",favoriteAPIController.create)
 router.get("/:id",favoriteAPIController.getByID)
 
 // conseguir favorito por id de la api externa
-router.get("/media/:media_id",favoriteAPIController.getByMediaID)
+router.get("/media/:media_id", isLoggedInAPI, favoriteAPIController.getByMediaID)
 
 // modificar un favorito
 router.put("/:id",favoriteAPIController.edit)

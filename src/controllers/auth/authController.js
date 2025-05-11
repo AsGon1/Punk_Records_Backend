@@ -32,7 +32,7 @@ async function login(email, password) {
     if (!email) throw new UserEmailNotProvided();
     if (!password) throw new UserPasswordNotProvided();
 
-    const user = await User.findOne({ where: { email } });
+    const user = await User.findOne({ where: { email }});
 
     if (!user) throw new UserInvalidCredentials();
 

@@ -24,10 +24,13 @@ async function getByID(id) {
 }
 
 // FUNCION PARA OBTENER EL FAVORITO POR ID DE LA API EXTERNA
-async function getByMediaID(media_id) {
+async function getByMediaID(media_id, user_id) {
 
-    const filter = {include: [User]};
-    filter.where = {media_id: media_id};
+    const filter = {/* include: [User] */};
+    filter.where = {
+        media_id: media_id,
+        user_id: user_id
+    };
 
     const favorite = await Favorite.findOne(filter);
 

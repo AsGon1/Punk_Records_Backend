@@ -25,7 +25,7 @@ async function login(req, res) {
         };
 
         const token = createToken(payload);
-        res.json({ token });
+        res.json({ result,token });
         
     } catch (error) {
         console.error(error);

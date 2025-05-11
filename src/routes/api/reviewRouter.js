@@ -24,7 +24,7 @@ router.put("/:favorite_id",reviewAPIController.edit)
 // ruta para eliminar una review
 router.delete("/:id/delete",reviewAPIController.remove)
 
-// ruta para eliminar un una review por id del favorito
+// ruta para eliminar una review por id del favorito
 router.delete("/favorite/:favorite_id/delete",reviewAPIController.removeByFavoriteID)
 
 export default router;

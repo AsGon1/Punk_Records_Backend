@@ -37,9 +37,9 @@ async function getByID(req,res){
 async function getByMediaID(req,res){
 
     try {
-
+        const user_id = req.user?.user_id;
         const media_id = req.params.media_id;
-        const favorite = await favoriteController.getByMediaID(media_id);
+        const favorite = await favoriteController.getByMediaID(media_id, user_id);
         res.json(favorite);
 
     } catch (error) {
