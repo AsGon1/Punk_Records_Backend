@@ -1,6 +1,6 @@
 # Punk_Records_Backend - Gestión de Usuarios
 
- es una aplicación backend que simula la gestión de de usuarios de una pagina pare reseñar animes y mangas. El sistema permite registrarse, iniciar sesión y realizar reseñas de aquellos medios que hayas hecho tus favoritos.
+ Es una aplicación backend que simula la gestión de de usuarios de una pagina pare reseñar animes y mangas. El sistema permite registrarse, iniciar sesión y realizar reseñas de aquellos medios que hayas hecho tus favoritos.
 
 ---
 
@@ -34,4 +34,9 @@ El proyecto está completamente dockerizado. Se utiliza **Docker Compose** para 
 1. **Clona el repositorio**:
    ```bash
    git clone https://github.com/tu-usuario/punk_records_backend.git
+
    cd punk_records_backend
+
+2. **Levantamos el contenedor con la base de datos**:
+   ```bash
+   docker compose up
